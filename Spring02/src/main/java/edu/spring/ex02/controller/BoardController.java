@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import edu.spring.ex02.domain.Board;
 import edu.spring.ex02.service.BoardService;
 
-@Controller // DispatcherServlet에 의해서 컴포넌트 객체로 생성되고 관리됨.
-@RequestMapping(value = "/board")
+@Controller // DispatcherServlet에 의해서 컴포넌트 객체로 생성되고 관리됨...
+@RequestMapping(value = "/board") 
 public class BoardController {
 	private static final Logger log = LoggerFactory.getLogger(BoardController.class);
 	
