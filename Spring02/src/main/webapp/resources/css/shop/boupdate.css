@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.container a { color: black;}
+.container a:hover { color: black;}
+input {border: none;}
+textarea  {border: none;}
+
+#title {
+	width: 100%;
+	padding-top:25px;
+	padding-bottom: 25px;
+	padding-left: 35px;
+	border-top: solid 2px black;
+	border-bottom: solid 1px #c7c7c7;
+	background-color: #f4efdf;
+	
+}
+
+.nav_update {
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+	float: right;
+	font-size: 13px;
+} 
+
+.nav_update li {
+	padding: 8px 12px;
+	margin-top: 10px;
+}
+
+#content{
+	width: 95%;
+	margin:30px;
+	
+}
+
+
+
+.submit_btn{
+	background-color: #1b5033;
+	width: 100px;
+	height: 36px;
+	border: solid 1px #303030; 	 
+	float: right; 
+	margin-right: 20px;
+	color: #f0f0f0; 
+	font-size: 13px;
+}   
+
+

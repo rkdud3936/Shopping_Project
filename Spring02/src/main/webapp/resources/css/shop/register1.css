@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+ .registerCont .container {
+            width: 530px;
+            margin: 40px auto;
+            line-height: 18px;
+            padding-top: 30px;
+			padding-bottom: 10px;
+        }
+        
+         .registerCont h5 {
+            text-align: center;
+            font-size: 30px; 
+        }
+        
+        .registerCont h5 span {
+            color: teal;
+        }
+       
+        .registerCont #signup { 
+            background-color: #216540;
+            color: white;
+            border: 0;
+            border-radius: 5px;
+            padding: 10px 224px;
+            margin-top: 20px;
+        }
+        
+       
+        .registerCont i {
+            color: lightgray;
+        }
+        
+        .registerCont input {
+            border: 1px solid lightgray;
+            border-radius: 3px;
+        }

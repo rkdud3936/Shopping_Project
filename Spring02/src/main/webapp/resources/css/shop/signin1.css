@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.signinCont .container {
+	width: 460px;
+	margin: 40px auto;
+	line-height: 18px;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	}
+
+.signinCont h5 {
+	text-align: center;
+	font-size: 30px; 
+}   
+
+.signinCont h5 span {
+	color: teal;
+}
+
+.signinCont .login {
+	background-color: #216540;
+	color: white;
+	border-radius: 5px;
+	border: 0;
+	padding: 10px 172px;
+}
+
+.signinCont #signup {
+	background-color: white;
+	color: teal;
+	border: 0;
+	font-size: 17px;
+}
+
+.signinCont p {
+	text-align: center;
+}
+
+.signinCont i {
+	color: lightgray;
+}
+
+
+.signinCont input {
+	border: 1px solid lightgray;
+	border-radius: 3px;
+}

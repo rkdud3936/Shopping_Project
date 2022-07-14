@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+.container a { color: black;}
+.container a:hover { color: black;}
+input {border: none;}
+input:focus {outline:none;}
+textarea  {border: none;}
+textarea:focus {outline:none;}
+
+#title {
+	width: 100%;
+	padding-top:25px;
+	padding-bottom: 25px;
+	padding-left: 35px;
+	border-top: solid 2px black;
+	border-bottom: solid 1px #c7c7c7;
+	background-color: #f4efdf;  
+}
+
+.nav_detail {
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+	float: right;
+	font-size: 13px;
+	
+}
+
+.nav_detail li {
+	padding: 8px 12px;
+	margin-top: 10px;
+}
+
+#content{
+	width: 100%;
+	margin:30px;
+	
+}
+
+.reply #rtext{
+	border: solid 1px black;
+	width: 100%;
+	padding: 5px;
+ 
+}  
+
+#btn_create_reply{
+	background-color: #1b5033;
+	width: 80px;
+	height: 36px; 
+	border: solid 1px #303030;
+	color: #f0f0f0; 
+	float: right;
+}
+
+
+.reply_item #rtext {
+	width: 100%;  	
+}
+
+.reply_item #userid{
+	font-size: 12px;
+}
+
+.reply_item #regdate{
+	font-size: 12px;	
+}
+.reply_item .reply_update{
+	
+	border: none;
+	color: #000000; 
+	font-size: 12px;
+	float: right;
+}
+
+.reply_item .reply_delete {
+	
+	border: none;
+	color: #000000;   
+	font-size: 12px;
+	float: right;
+} 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.spring.ex02.mapper.ProductMapper">
+	
+	<select id="selectAllPro" resultType="Product">
+    	SELECT * FROM ${TABLE_PRODUCTS} 
+    	ORDER BY ${COL_PID} DESC
+    </select>
+    
+    <!-- 제품 번호로 검색 -->
+    <select id="selectByPid" resultType="Product">
+    SELECT * FROM ${TABLE_PRODUCTS} 
+    WHERE ${COL_PID} = #{pid}
+    </select>
+    
+    <!-- 귀걸이 검색 -->
+    <select id="selectByEarring" resultType="Product">
+    SELECT * FROM ${TABLE_PRODUCTS} 
+    WHERE ${COL_PNAME} LIKE '%귀걸이%'
+    ORDER BY ${COL_PID} DESC
+    </select>
+    
+    <!-- 반지 검색 -->
+    <select id="selectByRing" resultType="Product">
+    SELECT * FROM ${TABLE_PRODUCTS} 
+    WHERE ${COL_PNAME} LIKE '%반지%'
+    ORDER BY ${COL_PID} DESC
+    </select>
+    
+    <!-- 새제품 추가 -->
+	<insert id="insertPro">
+    INSERT INTO ${TABLE_PRODUCTS} (${COL_PNAME}, ${COL_PPRICE}, ${COL_PIMAGE1}, ${COL_PIMAGE2}, ${COL_PIMAGE3}, ${COL_PDETAIL}) 
+    VALUES (#{pname}, #{pprice}, #{pimage1}, #{pimage2}, #{pimage3}, #{pdetail})
+    </insert>
+    
+    <!-- 제품 수정 --> 
+    <update id="updatePro">
+    UPDATE ${TABLE_PRODUCTS} 
+    SET ${COL_PNAME} = #{pname}, ${COL_PPRICE} = #{pprice}, ${COL_PIMAGE1} = #{pimage1}, ${COL_PIMAGE2} = #{pimage2}, ${COL_PIMAGE3} = #{pimage3}, ${COL_PRDATE} = sysdate, ${COL_PDETAIL} = #{pdetail} 
+    WHERE ${COL_PID} = #{pid}
+    </update>       
+    
+    <!-- 해당 제품 번호의 제품 삭제 -->
+    <delete id="deletePro">
+    DELETE FROM ${TABLE_PRODUCTS} 
+    WHERE ${COL_PID} = #{pid}
+    </delete>
+    
+    
+    
+    
+    
+</mapper>

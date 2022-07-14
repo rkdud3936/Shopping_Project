@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.spring.ex02.mapper.CartMapper">
+
+	<select id="select" resultType="Cart">
+	SELECT * FROM ${TABLE_CARTS}
+	ORDER BY ${COL_BNO} DESC
+	</select>
+	
+	<insert id="insert">
+	INSERT INTO ${TABLE_CARTS} (${COL_USERID}, ${COL_PID}, ${COL_CCOUNT}) 
+    VALUES (#{userid}, #{pid}, #{ccount})	
+	</insert>
+	
+	<update id="update">
+	UPDATE ${TABLE_CARTS}
+    SET ${COL_CCOUNT} = #{ccount}
+    WHERE ${COL_CID} = #{cid}
+	</update>
+	
+	<delete id="delete">
+	DELETE FROM ${TABLE_CARTS} WHERE ${COL_CID} = #{cid}
+	</delete>
+</mapper>	
+

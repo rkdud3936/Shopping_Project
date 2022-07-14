@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+
+.flex-container {
+  display: flex;
+  
+}
+
+
+.leftselect {
+	height: 140px;
+	width: 180px;
+	background-color: #1b5033;	
+}
+.leftselect h3{
+	color:#f0f0f0;
+	padding-top: 50px; 
+}
+ 
+.midselect {
+	height: 140px;
+	width: 260px;
+	background-color:#f4efdf;
+	text-align: left;
+	
+}
+
+.midselect h2 {
+	
+	padding-top: 50px;
+	padding-right: 20px;
+}
+
+.rightselect {
+	background-color:#f4efdf;
+	width: 670px; 
+}
+
+.rightselect .butt {
+	background-color: #1b5033;
+	border: 0;
+	color: #f0f0f0;
+}
+
+.select {
+	padding-top: 50px;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+	background-color: #1e5938; 
+	color: #f0f0f0; 
+}
+
+.table-hover tbody tr:hover td a{
+	color: #f0f0f0;
+}
+

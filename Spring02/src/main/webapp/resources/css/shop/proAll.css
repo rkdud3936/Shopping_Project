@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+
+
+.fimage img {
+	width: 100%;
+	
+}
+
+div.gallery {
+				margin: 10px;  				
+  				float: left;
+  				width: 257px;
+  				height: 400px;
+  			} 
+
+.pro {
+	font-size: 13px; 
+	margin-left: 10px;
+}
+.images {
+	overflow: hidden;
+}
+.images img {
+	transition: all 0.2s linear;
+}
+
+.images:hover img {
+  transform: scale(1.2);
+}
