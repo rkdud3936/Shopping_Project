@@ -4,8 +4,13 @@
 
 	<select id="select" resultType="Cart">
 	SELECT * FROM ${TABLE_CARTS}
-	ORDER BY ${COL_BNO} DESC
+	ORDER BY ${COL_CID} DESC
 	</select>
+	
+	<select id="selectByCid" resultType="Cart">
+    SELECT * FROM ${TABLE_CARTS} 
+    WHERE ${COL_CID} = #{cid}
+    </select>
 	
 	<insert id="insert">
 	INSERT INTO ${TABLE_CARTS} (${COL_USERID}, ${COL_PID}, ${COL_CCOUNT}) 

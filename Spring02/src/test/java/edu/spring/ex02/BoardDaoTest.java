@@ -12,10 +12,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import edu.spring.ex02.domain.Board;
+import edu.spring.ex02.domain.Cart;
 import edu.spring.ex02.domain.Product;
 import edu.spring.ex02.domain.User;
 //import edu.spring.ex02.domain.User;
 import edu.spring.ex02.persistence.BoardDao;
+import edu.spring.ex02.persistence.CartDao;
 import edu.spring.ex02.persistence.ProductDao;
 import edu.spring.ex02.persistence.UserDao;
 //import edu.spring.ex02.persistence.UserDao;
@@ -31,22 +33,25 @@ public class BoardDaoTest {
 	@Autowired private BoardDao boardDao;
 	@Autowired private UserDao userDao;
 	@Autowired private ProductDao productDao;
+	@Autowired private CartDao cartDao;
 	
 	
 	@Test
 	public void doTest() {
 		//logger.info("boardDao: {}", boardDao);
 		//logger.info("userDao: {}", userDao);
-		logger.info("productDao: {}", productDao);
+		//logger.info("productDao: {}", productDao);
+		//logger.info("cartDao: {}", cartDao);
 		
 //		List<Board> list = boardDao.read();
 //		List<Product> list = productDao.readRing();
+//		List<Cart> list = cartDao.read();
 //		logger.info("list size = {}", list.size());
 		
 //		Board board = boardDao.read(1);
-//		logger.info(board.toString());
 //		Product product = productDao.read(1);
-//		logger.info(product.toString());
+//		Cart cart = cartDao.read(1);
+//		logger.info(cart.toString());
 		
 //		Board board = new Board(0, "MyBatis-Spring Test", "마이바티스 스프링 테스트", "admin", null, 0, 0, null);
 //		int result = boardDao.create(board);
@@ -56,6 +61,11 @@ public class BoardDaoTest {
 //		int result = productDao.create(product);
 //		logger.info("INSERT 결과: {}", result);
 		
+//		Cart cart = new Cart(0, "guest", 1, 2);
+//		int result = cartDao.create(cart);
+//		logger.info("INSERT 결과: {}", result);
+
+				
 //		Board board = new Board(3, "수정 성공?", "MaBatis를 사용한 SQL UPDATE...", null, null, 0, 0, null);
 //		int result = boardDao.update(board);
 //		logger.info("UPDATE 결과: {}", result);
@@ -64,6 +74,9 @@ public class BoardDaoTest {
 //		int result = productDao.update(product);
 //		logger.info("UPDATE 결과: {}", result);
 		
+//		Cart cart = new Cart(21, "guest", 1, 3);
+//		int result = cartDao.update(cart);
+//		logger.info("UPDATE 결과: {}", result);
 		
 //		int result = boardDao.updateViewCnt(3);
 //		logger.info("updateViewCnt 결과: {}", result);
@@ -71,8 +84,11 @@ public class BoardDaoTest {
 //		int result = boardDao.delete(3);
 //		logger.info("delete 결과: {}", result);
 		
-		int result = productDao.delete(21);
-		logger.info("delete 결과: {}", result);
+//		int result = productDao.delete(21);
+//		logger.info("delete 결과: {}", result);
+		
+//		int result = cartDao.delete(21);
+//		logger.info("delete 결과: {}", result);
 		
 		
 //		List<Board> list = boardDao.read(3, "TEST");

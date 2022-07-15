@@ -1,0 +1,65 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true" %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://kit.fontawesome.com/1324c7db76.js" crossorigin="anonymous"></script>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		 <meta name="viewport" content="width=device-width, initial-scale=1" />
+         <link rel="stylesheet" 
+        	    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
+
+		 <link rel="stylesheet" href="../resources/css/shop/menubar.css">
+		 
+		 <style>
+			.container a { color: black;}
+		    .container a:hover { color: black;}
+		 </style>
+	</head>
+<body>
+	<%@ include file = "../include/mainnav.jsp" %>
+	
+	<div class="container">
+		<div class="cartTable">
+        	<table class="table table-hover">
+            	<thead>
+                	<tr>
+                    	<th>카트번호</th>
+                        <th>사진</th>
+                        <th>상품명</th>
+                        <th>가격</th>
+                        <th>수량</th>
+                        <th>금액</th>
+                        <th>수정</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody>
+                	<c:forEach var="cart" items="${cartList}">
+                    	<tr>
+                        	<td>${product.pid}</td>
+                            <td>
+                            	<a href="./proUpdate?pid=${product.pid}">${product.pname}</a>
+                            </td>
+                            <td>${product.pprice}</td>
+                            <td>
+                            	<img src="../resources/imgs/shop/${product.pimage1}" style="width: 70px; height: 100px;">
+                            </td>
+                            <td>
+                            	<fmt:formatDate value="${product.prdate}" pattern="yyyy/MM/dd HH:mm"/>
+                            </td>
+                            <td>${product.pdetail}</td>
+                        </tr>
+                    </c:forEach>
+                </tbody>
+            </table> 
+        </div>     
+	</div>
+
+ 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
