@@ -36,7 +36,7 @@
 			<a href="./">DREAM</a>
 		</div>
 		
-		<ul class="navbar_menu">
+		<ul class="navbar_menu"> 
 			<li><a href="./product/all">ALL</a></li>
 			<li><a href="./product/earring">Earring</a></li>
 			<li><a href="./product/ring">Ring</a></li>
@@ -48,14 +48,15 @@
 		<ul class="navbar_right">
 		<c:if test="${empty signInUserId}"> <%-- 로그인 되어 있지 않은 경우 --%>		
 			<li><a href="./user/signin">Login</a></li>	
-			<li><a href="./user/register"><i class="fa-solid fa-heart"></i></a></li>
+			
 		</c:if>
 		
 		<c:if test="${not empty signInUserId}"> <%-- 로그인 되어 있는 경우 --%>
 			<li> <span>${signInUserId}</span>
             	<a href="./user/signout">로그아웃</a>
             </li>
-            <li><a href="./user/register"><i class="fa-solid fa-heart"></i></a></li>
+            <li><a href="./cart/cartMain"><i class="fa-solid fa-heart"></i></a></li>
+            
 		</c:if>
 		</ul>
 		

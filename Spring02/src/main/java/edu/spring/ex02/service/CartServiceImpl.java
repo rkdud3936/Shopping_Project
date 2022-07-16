@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.spring.ex02.domain.Cart;
+import edu.spring.ex02.domain.CartListVO;
 import edu.spring.ex02.persistence.CartDao;
 
 @Service
@@ -17,7 +18,7 @@ public class CartServiceImpl implements CartService{
 	@Autowired private CartDao cartDao;
 
 	@Override
-	public List<Cart> select() {
+	public List<CartListVO> select() {
 		log.info("select() 호출");
 		
 		return cartDao.read();

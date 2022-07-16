@@ -28,38 +28,55 @@
             	<thead>
                 	<tr>
                     	<th>카트번호</th>
-                        <th>사진</th>
+                        <th>이미지</th>
                         <th>상품명</th>
                         <th>가격</th>
                         <th>수량</th>
-                        <th>금액</th>
+						<th>갯수*가격</th>
                         <th>수정</th>
                         <th>삭제</th>
                     </tr>
                 </thead>
                 <tbody>
-                	<c:forEach var="cart" items="${cartList}">
+                	
+                	<c:set var="sum" value="0" />
+                	<c:forEach var="cartList" items="${cartList}">
+                    <c:if test="${cartList.userid == signInUserId}">
                     	<tr>
-                        	<td>${product.pid}</td>
-                            <td>
-                            	<a href="./proUpdate?pid=${product.pid}">${product.pname}</a>
-                            </td>
-                            <td>${product.pprice}</td>
-                            <td>
-                            	<img src="../resources/imgs/shop/${product.pimage1}" style="width: 70px; height: 100px;">
-                            </td>
-                            <td>
-                            	<fmt:formatDate value="${product.prdate}" pattern="yyyy/MM/dd HH:mm"/>
-                            </td>
-                            <td>${product.pdetail}</td>
+                        	<td>${cartList.pid}</td>
+                        	<td>
+                        		<img src="../resources/imgs/shop/${cartList.pimage1}" style="width: 70px; height: 100px;">
+                        	</td>
+                        	<td>${cartList.pname}</td>
+                        	<td>${cartList.pprice}</td>
+                        	<td>${cartList.ccount}</td>
+                        	
+                        	<td>${cartList.ccount*cartList.pprice}</td>
+                        	<td>수정</td>
+                        	
+                        	<td>삭제</td>
+                            
                         </tr>
+							<c:set var="sum" value="${sum + (cartList.ccount*cartList.pprice)}" />                    
+                    
+                    </c:if>
                     </c:forEach>
+                    
                 </tbody>
             </table> 
         </div>     
+        
+		<div class="total">
+			총 합계: ${sum}원
+			<input type="button" value="결제하기" id="payment">	
+		</div>   
+		    
 	</div>
 
  	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		
+	</script>
 </body>
 </html>

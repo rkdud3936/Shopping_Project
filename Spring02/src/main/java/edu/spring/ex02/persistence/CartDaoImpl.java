@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import edu.spring.ex02.domain.Cart;
+import edu.spring.ex02.domain.CartListVO;
 
 @Repository 
 public class CartDaoImpl implements CartDao{
@@ -20,7 +21,7 @@ public class CartDaoImpl implements CartDao{
 	@Autowired private SqlSession sqlSession;
 
 	@Override
-	public List<Cart> read() {
+	public List<CartListVO> read() {
 		logger.info("cartDaoImpl.read() 호출");
 		
 		return sqlSession.selectList(CART_NAMESPACE + ".select");
