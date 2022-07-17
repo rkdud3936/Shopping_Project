@@ -12,8 +12,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import edu.spring.ex02.domain.Board;
 import edu.spring.ex02.domain.Cart;
 import edu.spring.ex02.domain.CartListVO;
+import edu.spring.ex02.domain.Product;
 import edu.spring.ex02.domain.User;
 import edu.spring.ex02.service.CartService;
 
@@ -40,5 +42,31 @@ public class CartController {
 		// controller 메서드가 리턴하는 문자열이 없으면 요청 주소로 View(jsp 파일)을 찾음.
 	}
 	
+	@RequestMapping(value = "/cartDelete", method = RequestMethod.GET)
+	public String cartDelete(int cid) {
+		log.info("cartDelete(pid={}) 호출", cid);
+		
+		cartService.delete(cid);
+		
+		return "redirect:/cart/cartMain";
+	}
+	
+	@RequestMapping(value = "/cartUpdate", method = RequestMethod.GET)
+	public void cartUpdate(int cid, Model model) {
+		log.info("cartUpdate(cid={}) GET 호출", cid);
+		
+		CartListVO cartlistvo = cartService.select(cid);
+		model.addAttribute("cartList", cartlistvo);
+		
+	}
+	
+	@RequestMapping(value = "/cartUpdate", method = RequestMethod.POST)
+	public String update(Cart cart) {
+		log.info("update({}) POST 호출", cart);
+		
+		cartService.update(cart); // 게시글 수정 서비스 완료.
+		
+		return "redirect:/cart/cartMain"; // 게시판 메인으로 이동.
+	}
 	
 }

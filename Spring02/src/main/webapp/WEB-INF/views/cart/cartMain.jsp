@@ -11,14 +11,22 @@
 		 <meta name="viewport" content="width=device-width, initial-scale=1" />
          <link rel="stylesheet" 
         	    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
-
+		 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 		 <link rel="stylesheet" href="../resources/css/shop/menubar.css">
 		 
 		 <style>
 			.container a { color: black;}
 		    .container a:hover { color: black;}
+		    #cart-delete {
+  background-color: rgba(0,0,0,0); 
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
 		 </style>
-	</head>
+	</head> 
 <body>
 	<%@ include file = "../include/mainnav.jsp" %>
 	
@@ -43,18 +51,24 @@
                 	<c:forEach var="cartList" items="${cartList}">
                     <c:if test="${cartList.userid == signInUserId}">
                     	<tr>
-                        	<td>${cartList.pid}</td>
+                        	<td>${cartList.cid}</td>
                         	<td>
+                        		<a href="../product/proDetail?pid=${cartList.pid}">
                         		<img src="../resources/imgs/shop/${cartList.pimage1}" style="width: 70px; height: 100px;">
+                        		</a>
                         	</td>
                         	<td>${cartList.pname}</td>
+                        	
                         	<td>${cartList.pprice}</td>
                         	<td>${cartList.ccount}</td>
                         	
                         	<td>${cartList.ccount*cartList.pprice}</td>
-                        	<td>수정</td>
-                        	
-                        	<td>삭제</td>
+                        	<td>
+                        		<a href="./cartUpdate?cid=${cartList.cid}" class="button">수정</a>
+                        	</td>
+                        	<td>
+                        		<a  href="./cartDelete?cid=${cartList.cid}" class="button"><span class="material-symbols-outlined">close</span></a>
+                  			</td>
                             
                         </tr>
 							<c:set var="sum" value="${sum + (cartList.ccount*cartList.pprice)}" />                    
@@ -66,17 +80,31 @@
             </table> 
         </div>     
         
-		<div class="total">
+        <div class="total">
 			총 합계: ${sum}원
 			<input type="button" value="결제하기" id="payment">	
 		</div>   
-		    
+		
+  
 	</div>
+	
+
 
  	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	
 	<script>
-		
-	</script>
+        $(document).ready(function () {
+        	
+        	$('#cart-delete').click(function (event) {
+        		event.preventDefault(); // 링크를 클릭했을 때의 기본 동작인 요청 보내기를 하지 않음.
+        		var result = confirm('정말 삭제할까요?');
+        		if (result) { // 사용자가 YES를 선택했을 때
+        			location = $(this).attr('href'); // 원래 이동하려고 했던 요청 주소로 요청 보내기.
+        		}
+        	});
+        	
+        });
+    </script>
 </body>
 </html>

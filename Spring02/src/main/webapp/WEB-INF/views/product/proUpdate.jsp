@@ -29,7 +29,7 @@
 		<nav>
         	<ul class=nav_update>	
         		<li><a id="menu-delete" href="./proDelete?pid=${product.pid}">삭제</a></li>
-        		<li><a href="./manager">상품관리목록</a></li>
+        		<li><a href="./manage">상품관리목록</a></li>
         	</ul>	
     	</nav>			
 			
@@ -99,7 +99,7 @@
 
  	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-		<script>
+	<script>
         $(document).ready(function () {
         	
         	$('#menu-delete').click(function (event) {

@@ -10,7 +10,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import edu.spring.ex02.domain.Board;
+import edu.spring.ex02.domain.Cart;
 import edu.spring.ex02.domain.Product;
+import edu.spring.ex02.service.CartService;
 import edu.spring.ex02.service.ProductService;
 
 
@@ -20,6 +23,7 @@ public class ProductController {
 	private static final Logger log = LoggerFactory.getLogger(ProductController.class);
 	
 	@Autowired private ProductService productService;
+	@Autowired private CartService cartService;
 	
 	@RequestMapping(value = "/all", method = RequestMethod.GET)
 	public void all(Model model) {
@@ -93,6 +97,15 @@ public class ProductController {
 		log.info("detail(pid={}) GET 호출", pid);
 		Product product = productService.select(pid);
 		model.addAttribute("product", product);
+	}
+	
+	@RequestMapping(value = "/proDetail", method = RequestMethod.POST)
+	public String insertCart(Cart cart) {
+		log.info("insertCart({}) POST 호출", cart);
+		
+		cartService.insert(cart);
+		
+		return "redirect:/cart/cartMain";
 	}
 	
 	

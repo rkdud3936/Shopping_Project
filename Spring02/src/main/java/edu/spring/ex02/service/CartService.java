@@ -7,7 +7,7 @@ import edu.spring.ex02.domain.CartListVO;
 
 public interface CartService {
 	List<CartListVO> select();
-	Cart select(int cid);
+	CartListVO select(int cid);
 	int insert(Cart cart);
 	int update(Cart cart);
 	int delete(int cid);

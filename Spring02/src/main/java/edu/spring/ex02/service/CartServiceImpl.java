@@ -25,10 +25,10 @@ public class CartServiceImpl implements CartService{
 	}
 
 	@Override
-	public Cart select(int cid) {
+	public CartListVO select(int cid) {
 		log.info("select(cid={}) 호출", cid);
-		Cart cart = cartDao.read(cid); // 해당 카트번호의 카트내용을 찾음
-		return cart;
+		CartListVO cartlistvo = cartDao.read(cid); // 해당 카트번호의 카트내용을 찾음
+		return cartlistvo;
 	}
 
 	@Override

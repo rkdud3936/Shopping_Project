@@ -28,7 +28,7 @@ public class CartDaoImpl implements CartDao{
 	}
 	
 	@Override
-	public Cart read(int cid) {
+	public CartListVO read(int cid) {
 		logger.info("cartDaoImpl.read(cid={}) 호출", cid);
 		
 		return sqlSession.selectOne(CART_NAMESPACE + ".selectByCid", cid);

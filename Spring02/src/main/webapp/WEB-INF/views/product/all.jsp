@@ -30,18 +30,7 @@
 	
 	<div class="container">
 		
-		<nav class="menu"> <!-- 메뉴 -->
-        	<ul>
-        		<c:if test="${signInUserId == '관리자'}">
-        		<li>
-        			<a href="./manage">상품 관리</a>
-        		</li> 
-        		</c:if>
-        	</ul>
-        </nav> 
-		
 		<br/>
-		
 		<div class="fimage">
      	   <img src="../resources/imgs/shop/pr13.jpg" alt="">
     	</div> 
@@ -65,6 +54,16 @@
 				</div>
 			</c:forEach>
 		</div> 
+		
+		<nav class="menu"> <!-- 메뉴 -->
+        	<ul>
+        		<c:if test="${signInUserId == '관리자'}">
+        		<li>
+        			<a href="./manage">상품 관리</a>
+        		</li> 
+        		</c:if>
+        	</ul>
+        </nav> 		
 	</div>
 
  	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>

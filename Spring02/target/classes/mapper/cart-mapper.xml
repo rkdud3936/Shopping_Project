@@ -11,8 +11,12 @@
 	ORDER BY ${COL_CID} DESC
 	</select>
 	
-	<select id="selectByCid" resultType="Cart">
-    SELECT * FROM ${TABLE_CARTS} 
+	<select id="selectByCid" resultType="CartListVO">
+    SELECT a.cid,  a.userid, a.pid, a.ccount,
+	b.pname, b.pprice, b.pimage1 
+	FROM carts a
+	inner join products b
+		on a.pid=b.pid 
     WHERE ${COL_CID} = #{cid}
     </select>
 	

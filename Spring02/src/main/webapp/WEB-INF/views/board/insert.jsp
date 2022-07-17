@@ -34,7 +34,7 @@
                     
                     <div style="padding-left: 30px; padding-bottom: 10px; padding-top: 10px; font-size: 13px;">
                        <label for="userid" style="font-weight:bold;">작성자</label>
-                       <input type="text" name="userid" value="${signInUserId}" required readonly />
+                       
                     </div>
                     <hr style="margin: 0"/>
                     
