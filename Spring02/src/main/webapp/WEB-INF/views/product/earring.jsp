@@ -19,13 +19,13 @@
 		    .container a:hover { color: black;}
 		 </style>
 	</head>
-<body>
+<body> 
 	<%@ include file = "../include/mainnav.jsp" %>
 
 	<div class="container">
 		<br/>
 		<div class="fimage">
-     	   <img src="../resources/imgs/shop/pr13.jpg" alt="">
+     	   <img src="../resources/imgs/shop/pr22.jpg" alt="">
     	</div> 
 
 		<br/>

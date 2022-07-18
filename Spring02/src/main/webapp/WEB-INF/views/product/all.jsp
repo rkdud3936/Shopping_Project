@@ -31,9 +31,9 @@
 	<div class="container">
 		
 		<br/>
-		<div class="fimage">
-     	   <img src="../resources/imgs/shop/pr13.jpg" alt="">
-    	</div> 
+		<div class="fimage" style="text-align: center;"> 
+     	   <img src="../resources/imgs/shop/pr28.jpg">
+    	</div>  
 		
 		<br/>
 		

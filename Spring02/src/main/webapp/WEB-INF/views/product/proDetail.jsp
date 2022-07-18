@@ -57,6 +57,7 @@
 											<option value="${i}">${i} 
 										</c:forEach>
 									</select>개
+								
 									<input type="submit" value="장바구니에 담기"> 
 								</form>
 								<a href="./">상품 목록</a>

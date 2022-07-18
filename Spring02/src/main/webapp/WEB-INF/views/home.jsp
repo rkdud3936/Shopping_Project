@@ -16,20 +16,53 @@
         	    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
 			<title>Brand</title>
 		<link rel="stylesheet" href="./resources/css/shop/menubar.css">
-		
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		
 		
 		<script src="./resources/js/bar.js" defer></script>
 	<style>
   /* Make the image fully responsive */
   .carousel-inner img {
-    width: 100%;
-    
-    
+    width: 100%; 
   }
+  
+  /* Tabs*/
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #113320;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#tabs{
+	
+    color: #133c25;
+}
+#tabs h6.section-title{
+    color: #133c25;
+}
+
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #133c25; 
+    background-color: transparent;
+    border-color: transparent transparent #133c25; 
+    border-bottom: 4px solid !important;
+    font-size: 20px;
+    font-weight: bold;
+}
+#tabs .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #133c25;
+    font-size: 20px;
+} 
   </style>	
 </head>
-<body>
+<body >  
 	<nav class="apple">
 		<div class="navbar_logo">
 			<i class="fa-solid fa-gem"></i>
@@ -71,41 +104,134 @@
  			<source src="movie.ogg" type="video/ogg">
  		</video>
 	</div>
-	 	
-	<div>안녕</div>
-	 	
-<div class="container-fluid" style="padding: 0;" >
-	<div id="demo" class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
+	
+	<!-- Tabs -->
+	<section id="tabs">
+		<div class="container">
+			<h6 class="section-title h1">Best</h6>
+			<div class="row">
+				<div class="col-xs-12 ">
+					<nav>
+						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+							<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-all" role="tab" aria-controls="nav-home" aria-selected="true">All</a>
+							<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-earring" role="tab" aria-controls="nav-profile" aria-selected="false">Earring</a>
+							<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-ring" role="tab" aria-controls="nav-contact" aria-selected="false">Ring</a>
+						</div>
+					</nav>
+					<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+						<div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-home-tab">
+							<div style="text-align: center;">
+								<br/>
+								<h3>찾았다. 내 POINT</h3>
+								<h6>심플하면서도 포인트가 되는 주얼리입니다.</h6>
+								<a href="./product/all" style="color: #133c25; font-size: 12px; float: right;">더보기</a>
+							</div>
+							<br/> 
+							<div class="row">
+								<img src="./resources/imgs/shop/pr2.jpg" style="width: 280px; margin-left: 10px">
+								<img src="./resources/imgs/shop/pr17.jpg" style="width: 280px; margin-left: 10px">
+								<img src="./resources/imgs/shop/pr12.jpg" style="width: 280px; margin-left: 10px">
+								<img src="./resources/imgs/shop/pr14.jpg" style="width: 280px; margin-left: 10px">		  
+							</div>
+						</div>					
+					
+						<div class="tab-pane fade" id="nav-earring" role="tabpanel" aria-labelledby="nav-profile-tab">
+							<div style="text-align: center;"> 
+								<br/>
+								<h3>커피 한 잔 할래요</h3>
+								<h6>착용하는 순간 예쁨 상승!</h6>
+								<a href="./product/earring" style="color: #133c25; font-size: 12px; float: right;">더보기</a>
+							</div>
+							<br/> 
+							<div class="row" >
+								<img src="./resources/imgs/shop/pr2.jpg" style="width: 24%; margin-left: 10px">
+								<img src="./resources/imgs/shop/pr4.jpg" style="width: 24%; margin-left: 10px">
+								<img src="./resources/imgs/shop/pr08.jpg" style="width: 24%; margin-left: 10px">
+								<img src="./resources/imgs/shop/pr10.jpg" style="width: 24%; margin-left: 10px">		
+							</div>	
+						</div>
+					
+						<div class="tab-pane fade" id="nav-ring" role="tabpanel" aria-labelledby="nav-contact-tab">
+							<div style="text-align: center;">
+								<br/>
+								<h3>손이가요 손이가</h3>
+								<h6>보는 순간 끼고 싶은 마성의 반지</h6>
+								<a href="./product/ring" style="color: #133c25; font-size: 12px; float: right;">더보기</a>
+							</div>
+							<br/> 
+							<div class="row" >
+								<img src="./resources/imgs/shop/pr14.jpg" style="width: 24%; margin-left: 10px">
+								<img src="./resources/imgs/shop/pr15.jpg" style="width: 24%; margin-left: 10px">
+								<img src="./resources/imgs/shop/pr17.jpg" style="width: 24%; margin-left: 10px">
+								<img src="./resources/imgs/shop/pr16.jpg" style="width: 24%; margin-left: 10px">		
+							</div>					
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+	</section>
+	<br/>
+	<br/>
+	
+	<div class="container">
+		<h6>Dream Package</h6>
+		<table>
+			<tr>
+				<td>
+					<img src="./resources/imgs/shop/pr18.jpg" class="rounded" width="350" height="350"> 
+				</td>
+				<td align="center">
+					<div style="padding: 15px;"> 
+						<h3>🎁 선물 포장 Event 🎁</h3>
+						<br><br>
+						<p>
+							드림의 패키지를 소개합니다.<br/>
+							1개만 구매하더라도 선물받는 기분좋은 설렘을 드리기 위해 종이봉투에 실리본을 감아 포장해 드립니다 !<br>
+							3개 이상 구매하시면 종이박스에 리본을 묶어 선물포장 해드리고 있어요. <br>
+							작은 기쁨과 설렘을 위해 노력하는 DREAM이 되겠습니다 :)  오늘 밤도 편안하고 포근한 밤 되세요🌖
+					</p>
+					</div>
+				</td>
+				<td>
+					<img src="./resources/imgs/shop/pr19.jpg" class="rounded" width="350" height="350"> 
+				</td>
+			</table>
+		</div>
+	<br/>
+	 
+	<div class="container"> 
+		<div id="demo" class="carousel slide" data-ride="carousel">
+			<ul class="carousel-indicators">
+   				<li data-target="#demo" data-slide-to="0" class="active"></li>
+   	 			<li data-target="#demo" data-slide-to="1"></li>
+    			<li data-target="#demo" data-slide-to="2"></li>
+  			</ul>
+
+  			<div class="carousel-inner"> 
+    			<div class="carousel-item active">
+     				 <img src="./resources/imgs/shop/web01.jpg" alt="이미지1" width="1100" height="300">
+    			</div>
+    			<div class="carousel-item">
+      				<img src="./resources/imgs/shop/web02.jpg" alt="이미지2" width="1100" height="300">
+    			</div>
+    			<div class="carousel-item">
+      				<img src="./resources/imgs/shop/web03.jpg" alt="이미지3" width="1100" height="300">
+    			</div> 
+  			</div>
   
-  <!-- The slideshow -->
-  <div class="carousel-inner"> 
-    <div class="carousel-item active">
-      <img src="./resources/imgs/shop/web01.jpg" alt="이미지1" width="1100" height="300">
-    </div>
-    <div class="carousel-item">
-      <img src="./resources/imgs/shop/web02.jpg" alt="이미지2" width="1100" height="300">
-    </div>
-    <div class="carousel-item">
-      <img src="./resources/imgs/shop/web03.jpg" alt="이미지3" width="1100" height="300">
-    </div> 
-  </div>
   
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-</div>
-</div>	
+  			<a class="carousel-control-prev" href="#demo" data-slide="prev">
+    			<span class="carousel-control-prev-icon"></span>
+  			</a>
+ 			 <a class="carousel-control-next" href="#demo" data-slide="next">
+    			<span class="carousel-control-next-icon"></span>
+  			</a>
+		</div>
+	</div>	
+	<br/> 
+
 
 
 	

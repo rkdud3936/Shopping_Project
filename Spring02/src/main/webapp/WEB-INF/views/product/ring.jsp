@@ -25,7 +25,7 @@
 	<div class="container">
 		<br/>
 		<div class="fimage">
-     	   <img src="../resources/imgs/shop/pr13.jpg" alt="">
+     	   <img src="../resources/imgs/shop/pr23.jpg" >
     	</div> 
 
 		<br/>
