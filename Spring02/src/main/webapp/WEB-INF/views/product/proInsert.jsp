@@ -24,7 +24,10 @@
 		<%@ include file = "../include/mainnav.jsp" %>
 		<br>
 		<div class="container">
-			 <form method="post">
+			<br>
+			<h4 style="text-align: center;">[상품 등록]</h4> 
+			<br>
+			<form method="post" style="margin: 30px;">
 	  			<div class="row">
 	    			<div class="col-25">
 	     				<label for="pname">상품명</label>
@@ -63,18 +66,18 @@
 	  				<div class="col-25">
 	  				</div>
 	  				<div class="col-75">
-	  					<input type="file" id="pimage2" name="pimage2" />
+	  					<input type="file" id="pimage2" name="pimage2" required/>
 	  				</div>			
 	  			</div>
-	
+	  			
 	  			<div class="row" >
 	  				<div class="col-25">
 	  				</div>
 	  				<div class="col-75">
-	  					<input type="file" id="pimage3" name="pimage3" />
+	  					<input type="file" id="pimage2" name="pimage3" />
 	  				</div>			
-	  			</div>  			
-	  			  			
+	  			</div>
+		  			
 	  			<br>
 	  			
 	  			<div>

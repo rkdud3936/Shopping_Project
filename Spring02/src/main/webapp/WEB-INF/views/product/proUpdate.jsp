@@ -20,97 +20,95 @@
 		    .container a:hover { color: black;}
 		 </style>
 	</head>
-<body>
-	<%@ include file = "../include/mainnav.jsp" %>
-
-        
-	<br>
-	<div class="container">
-		<nav>
-        	<ul class=nav_update>	
-        		<li><a id="menu-delete" href="./proDelete?pid=${product.pid}">삭제</a></li>
-        		<li><a href="./manage">상품관리목록</a></li>
-        	</ul>	
-    	</nav>			
-			
-		 <form  action="./proUpdate" method="post">
-		 	<div style="display: none;">
-            	<input type="number" id="pid" value="${product.pid}"  readonly/>
-            </div>
-  			<div class="row">
-    			<div class="col-25">
-     				<label for="pname">상품명</label>
-    			</div>
-    			<div class="col-75">
-      				<input type="text" id="pname" name="pname" value="${product.pname}" required autofocus>
-    			</div>
-  			</div>
-  			<div class="row">
-    			<div class="col-25">
-     		 		<label for="pprice">가격</label>
-    			</div>
-    			<div class="col-75">
-      				<input type="text" id="pprice" name="pprice" value="${product.pprice}" required>
-    			</div>
-  			</div>
-  			
-  			<div class="row">
-    			<div class="col-25">
-     				<label for="pdetail">상세정보</label>
-   			 	</div>
-    			<div class="col-75">
-      				<textarea id="pdetail" name="pdetail" style="height:200px" required>${product.pdetail}
-      				</textarea>
-    			</div>
-  			</div>
-  			
-  			<div class="row" >
-  				<div class="col-25">
-  				</div>
-  				<div class="col-75">
-  					<input type="file" id="pimage1" name="pimage1" value="${product.pimage1}" required/>
-  				</div>			
-  			</div>
-
-  			<div class="row" >
-  				<div class="col-25">
-  				</div>
-  				<div class="col-75">
-  					<input type="file" id="pimage2" name="pimage2" value="${product.pimage2}" />
-  				</div>			
-  			</div>
-
-  			<div class="row" >
-  				<div class="col-25">
-  				</div>
-  				<div class="col-75">
-  					<input type="file" id="pimage3" name="pimage3" value="${product.pimage3}" />
-  				</div>			
-  			</div>  			
-  			  			
-  			<br>
-  			
-  			<div>
-    			<input type="submit" value="등록" style="float: right;">
-  			</div>
-  		</form>
-	</div>
-
-
- 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-	<script>
-        $(document).ready(function () {
-        	
-        	$('#menu-delete').click(function (event) {
-        		event.preventDefault(); // 링크를 클릭했을 때의 기본 동작인 요청 보내기를 하지 않음.
-        		var result = confirm('정말 삭제할까요?');
-        		if (result) { // 사용자가 YES를 선택했을 때
-        			location = $(this).attr('href'); // 원래 이동하려고 했던 요청 주소로 요청 보내기.
-        		}
-        	});
-        	
-        });
-    </script>
-</body>
+	<body>
+		<%@ include file = "../include/mainnav.jsp" %>
+		<br>
+		<div class="container">	
+			<h4 style="text-align: center; margin: 30px;">[상품 수정/삭제]</h4>
+			<nav>
+	        	<ul class=nav_update>	
+	        		<li><a id="menu-delete" href="./proDelete?pid=${product.pid}">삭제</a></li>
+	        		<li><a href="./manage">상품관리목록</a></li>
+	        	</ul>	
+	    	</nav>
+			<hr><br> 
+	    	
+	    	<div>		 	
+				<form  action="./proUpdate" method="post" style="margin: 30px;">
+					<div style="display: none;">
+		            	<input type="number" id="pid" name="pid" value="${product.pid}"  readonly/>
+		            </div>
+		  			<div class="row">
+		    			<div class="col-25">
+		     				<label for="pname">상품명</label>
+		    			</div>
+		    			<div class="col-75">
+		      				<input type="text" id="pname" name="pname" value="${product.pname}" required autofocus>
+		    			</div>
+		  			</div>
+		  			<div class="row">
+		    			<div class="col-25">
+		     		 		<label for="pprice">가격</label>
+		    			</div>
+		    			<div class="col-75">
+		      				<input type="text" id="pprice" name="pprice" value="${product.pprice}" required>
+		    			</div>
+		  			</div>
+		  			
+		  			<div class="row">
+		    			<div class="col-25">
+		     				<label for="pdetail">상세정보</label>
+		   			 	</div>
+		    			<div class="col-75">
+		      				<textarea id="pdetail" name="pdetail" style="height:200px" required>${product.pdetail}
+		      				</textarea>
+		    			</div>
+		  			</div>
+		  			
+		  			<div class="row" >
+		  				<div class="col-25">
+		  				</div>
+		  				<div class="col-75">
+		  					<input type="file"/>
+		  				</div>			
+		  			</div>
+		  			
+		   			<div class="row" >
+		  				<div class="col-25">
+		  				</div>
+						<div class="col-75"> 
+							<input type="text" id="pimage1" name="pimage1" value="${product.pimage1}" style="width: 200px;"/>
+							<input type="text" id="pimage2" name="pimage2" value="${product.pimage2}" style="width: 200px;"/>
+							<input type="text" id="pimage3" name="pimage3" value="${product.pimage3}" style="width: 200px;"/>
+		  				</div>  			
+		  			</div> 			
+		  			
+		  			 
+		  			  			
+		  			<br>
+		  			
+		  			<div>
+		    			<input type="submit" value="등록" style="float: right;">
+		  			</div>
+		  		</form>
+			</div> 
+		</div>
+	
+	
+	 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+	        $(document).ready(function () {
+	        	
+	        	$('#menu-delete').click(function (event) {
+	        		event.preventDefault(); // 링크를 클릭했을 때의 기본 동작인 요청 보내기를 하지 않음.
+	        		var result = confirm('정말 삭제할까요?');
+	        		if (result) { // 사용자가 YES를 선택했을 때
+	        			location = $(this).attr('href'); // 원래 이동하려고 했던 요청 주소로 요청 보내기.
+	        		}
+	        	});
+	        	
+	        });
+	    </script>
+	</body>
 </html>
