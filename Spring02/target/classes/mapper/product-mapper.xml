@@ -2,9 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.spring.ex02.mapper.ProductMapper">
 	
+	<!-- all 날짜순 검색(pid여도 상관x) -->
 	<select id="selectAllPro" resultType="Product">
     	SELECT * FROM ${TABLE_PRODUCTS} 
     	ORDER BY ${COL_PID} DESC
+    </select>
+    
+    <!-- all 낮은 가격순 -->
+    <select id="selectAllPrice" resultType="Product">
+    	SELECT * FROM ${TABLE_PRODUCTS} 
+    	ORDER BY ${COL_PPRICE} ASC 
     </select>
     
     <!-- 제품 번호로 검색 -->
@@ -20,13 +27,26 @@
     ORDER BY ${COL_PID} DESC
     </select>
     
+    <!-- 귀걸이 낮은 가격으로 검색 -->
+    <select id="selectByEarringPrice" resultType="Product">
+    SELECT * FROM ${TABLE_PRODUCTS} 
+    WHERE ${COL_PNAME} LIKE '%귀걸이%'
+    ORDER BY ${COL_PPRICE} ASC
+    </select>
+    
     <!-- 반지 검색 -->
     <select id="selectByRing" resultType="Product">
     SELECT * FROM ${TABLE_PRODUCTS} 
     WHERE ${COL_PNAME} LIKE '%반지%'
     ORDER BY ${COL_PID} DESC
     </select>
-    
+
+    <!-- 반지 검색 -->
+    <select id="selectByRingPrice" resultType="Product">
+    SELECT * FROM ${TABLE_PRODUCTS} 
+    WHERE ${COL_PNAME} LIKE '%반지%'
+    ORDER BY ${COL_PPRICE} ASC
+    </select>    
     <!-- 새제품 추가 -->
 	<insert id="insertPro">
     INSERT INTO ${TABLE_PRODUCTS} (${COL_PNAME}, ${COL_PPRICE}, ${COL_PIMAGE1}, ${COL_PIMAGE2}, ${COL_PIMAGE3}, ${COL_PDETAIL}) 

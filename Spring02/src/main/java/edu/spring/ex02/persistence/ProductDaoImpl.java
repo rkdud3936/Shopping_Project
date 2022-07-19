@@ -25,6 +25,14 @@ public class ProductDaoImpl implements ProductDao {
 		return sqlSession.selectList(PRODUCT_NAMESPACE + ".selectAllPro");
 
 	}
+	
+	@Override
+	public List<Product> readPrice() {
+		logger.info("productDaoImpl.read() 호출");
+		
+		return sqlSession.selectList(PRODUCT_NAMESPACE + ".selectAllPrice");
+
+	}
 
 	@Override
 	public List<Product> readEarring() {
@@ -32,12 +40,27 @@ public class ProductDaoImpl implements ProductDao {
 		
 		return sqlSession.selectList(PRODUCT_NAMESPACE + ".selectByEarring");
 	}
+	
+	@Override
+	public List<Product> readEarringPrice() {
+		logger.info("productDaoImpl.readEarring() 호출");
+		
+		return sqlSession.selectList(PRODUCT_NAMESPACE + ".selectByEarringPrice");
+	}
 
 	@Override
 	public List<Product> readRing() {
 		logger.info("productDaoImpl.readRing() 호출" );
 		
 		return sqlSession.selectList(PRODUCT_NAMESPACE + ".selectByRing");
+			
+	}
+	
+	@Override
+	public List<Product> readRingPrice() {
+		logger.info("productDaoImpl.readRing() 호출" );
+		
+		return sqlSession.selectList(PRODUCT_NAMESPACE + ".selectByRingPrice");
 			
 	}
 

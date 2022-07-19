@@ -30,20 +30,28 @@ public class ProductController {
 		log.info("all() 호출");
 		List<Product> list = productService.selectAll();
 		model.addAttribute("productAllList", list);
+		List<Product> listprice = productService.selectAllPrice();
+		model.addAttribute("productAllListPrice", listprice);
 	}
+	
+
 	
 	@RequestMapping(value = "/earring", method = RequestMethod.GET)
 	public void earring(Model model) {
-		log.info("all() 호출");
+		log.info("earring() 호출");
 		List<Product> list = productService.selectEarring();
 		model.addAttribute("productEarringList", list);
+		List<Product> listprice = productService.selectEarringPrice();
+		model.addAttribute("productEarringListPrice", listprice);
 	}
 	
 	@RequestMapping(value = "/ring", method = RequestMethod.GET)
 	public void ring(Model model) {
-		log.info("all() 호출");
+		log.info("ring() 호출");
 		List<Product> list = productService.selectRing();
 		model.addAttribute("productRingList", list);
+		List<Product> listprice = productService.selectRingPrice();
+		model.addAttribute("productRingListPrice", listprice);
 	}
 	
 	@RequestMapping(value = "/manage", method = RequestMethod.GET)

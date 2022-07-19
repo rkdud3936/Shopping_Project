@@ -28,3 +28,31 @@ div.gallery {
 .images:hover img {
   transform: scale(1.2);
 }
+section {
+    padding-top: 30px; 
+    padding-bottom: 0px;
+}
+
+section .section-title {
+    text-align: center;
+    
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #133c25; 
+    background-color: transparent;
+    border-color: transparent transparent #133c25; 
+    border-bottom: 4px solid !important;
+    font-size: 15px; 
+    font-weight: bold;
+}
+#tabs .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #133c25; 
+    font-size: 15px;
+} 

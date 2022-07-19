@@ -26,13 +26,8 @@
 	<%@ include file = "../include/mainnav.jsp" %> 
 	
 	<div class="container">
-      	
-      	<nav>
-        	<ul>	
-        		<li><a href="./proInsert">새 제품 추가</a></li>
-        	</ul>	
-        </nav>	
-
+		<a href="./proInsert" style="float: right;">[제품 등록]</a>
+      	<div style="text-align: center; padding: 20px;"><h2>PRODUCT LIST [관리자용]</h2></div>
  		<div class="proTable">
         	<table class="table table-hover">
             	<thead>

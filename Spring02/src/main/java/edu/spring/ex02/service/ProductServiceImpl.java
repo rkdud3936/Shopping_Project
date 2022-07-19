@@ -22,12 +22,26 @@ public class ProductServiceImpl implements ProductService {
 		
 		return productDao.read(); // productdao read
 	}
-
+	
+	@Override
+	public List<Product> selectAllPrice() {
+		log.info("select() 호출");
+		
+		return productDao.readPrice(); // productdao read
+	}
+	
 	@Override
 	public List<Product> selectEarring() {
 		log.info("select() 호출");
 		
 		return productDao.readEarring();
+	}
+	
+	@Override
+	public List<Product> selectEarringPrice() {
+		log.info("select() 호출");
+		
+		return productDao.readEarringPrice();
 	}
 
 	@Override
@@ -37,6 +51,12 @@ public class ProductServiceImpl implements ProductService {
 		return productDao.readRing();
 	}
 
+	@Override
+	public List<Product> selectRingPrice() {
+		log.info("select() 호출");
+		
+		return productDao.readRingPrice();
+	}
 	@Override
 	public Product select(int pid) {
 		log.info("select(pid={}) 호출", pid);
@@ -66,6 +86,8 @@ public class ProductServiceImpl implements ProductService {
 		
 		return productDao.delete(pid);		
 	}
+
+
 	
 	
 	
