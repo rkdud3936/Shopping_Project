@@ -18,44 +18,44 @@
 		 <link rel="stylesheet" href="../resources/css/shop/menubar.css">
 		 <script src="../resources/js/bar.js" defer></script>
 </head>
-<body>
 	<body>
-	<nav class="apple">
-		<div class="navbar_logo">
-			<i class="fa-solid fa-gem"></i>
-			<a href="../">DREAM</a>
-		</div>
-		
-		<ul class="navbar_menu">
-			<li><a href="../product/all">ALL</a></li>
-			<li><a href="../product/earring">Earring</a></li>
-			<li><a href="../product/ring">Ring</a></li>
-			<li><a href="">Event</a></li>
-			<li><a href="">News</a></li>
-			<li><a href="../board/main">FAQ</a></li>
-		</ul>
-		
-		<ul class="navbar_right">
-		<c:if test="${empty signInUserId}"> <%-- 로그인 되어 있지 않은 경우 --%>		
-			<li><a href="../user/signin">Login</a></li>	
+		<body>
+		<nav class="apple">
+			<div class="navbar_logo">
+				<i class="fa-solid fa-gem"></i>
+				<a href="../">DREAM</a>
+			</div>
 			
-		</c:if>
-		
-		<c:if test="${not empty signInUserId}"> <%-- 로그인 되어 있는 경우 --%>
-			<li> <span>[${signInUserId}]</span>
-            	<a href="../user/signout">로그아웃</a>
-            </li>
-            <li><a href="../cart/cartMain"><i class="fa-solid fa-heart"></i></a></li>
-		</c:if>
-		</ul>
-		
-		<a href="#" class="navbar_toogleBtn">
-			<i class="fa-solid fa-bars"></i>
-		</a>
-	</nav>
-
- 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+			<ul class="navbar_menu">
+				<li><a href="../product/all">ALL</a></li>
+				<li><a href="../product/earring">Earring</a></li>
+				<li><a href="../product/ring">Ring</a></li>
+				<li><a href="">Event</a></li>
+				<li><a href="">News</a></li>
+				<li><a href="../board/main">FAQ</a></li>
+			</ul>
+			
+			<ul class="navbar_right">
+			<c:if test="${empty signInUserId}"> <%-- 로그인 되어 있지 않은 경우 --%>		
+				<li><a href="../user/signin">Login</a></li>	
+				
+			</c:if>
+			
+			<c:if test="${not empty signInUserId}"> <%-- 로그인 되어 있는 경우 --%>
+				<li> <span>[${signInUserId}]</span>
+	            	<a href="../user/signout">로그아웃</a>
+	            </li>
+	            <li><a href="../cart/cartMain"><i class="fa-solid fa-heart"></i></a></li>
+			</c:if>
+			</ul>
+			
+			<a href="#" class="navbar_toogleBtn">
+				<i class="fa-solid fa-bars"></i>
+			</a>
+		</nav>
 	
-</body>
+	 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		
+	</body>
 </html>

@@ -16,42 +16,42 @@
          <link rel="stylesheet" href="../resources/css/shop/menubar.css">
 		 <link rel="stylesheet" href="../resources/css/shop/boinsert.css">	
 </head>
-<body>
-	<%@ include file = "../include/mainnav.jsp" %>
+	<body>
+		<%@ include file = "../include/mainnav.jsp" %>
+		
+		<div class="container">
+	      	
+	      	<nav>
+	        	<ul class=nav_insert>	
+	        		<li><a href="./main">게시판 메인</a></li>
+	        	</ul>	
+	        </nav>
+	        
+	        <div> <!-- 입력 양식 -->
+	                <form method="post"> <!-- /board/insert POST submit -->
+	                    
+	                    <input type="text" id="title" name="title" placeholder="제목 입력" required autofocus style="font-size: 25px;" />
+	                    
+	                    <div style="padding-left: 30px; padding-bottom: 10px; padding-top: 10px; font-size: 13px;">
+	                       <label for="userid" style="font-weight:bold;">작성자</label>
+	                       
+	                    </div>
+	                    <hr style="margin: 0"/>
+	                    
+	                    
+	                    <textarea rows="10" id="content" name="content" placeholder="내용 입력" required></textarea>
+	                    
+	                    
+	                    <div>
+	                        <input class="submit_btn" type="submit" value="등록">
+	                    </div>
+	                </form>
+	         </div>
+	         
+		
+		</div>
 	
-	<div class="container">
-      	
-      	<nav>
-        	<ul class=nav_insert>	
-        		<li><a href="./main">게시판 메인</a></li>
-        	</ul>	
-        </nav>
-        
-        <div> <!-- 입력 양식 -->
-                <form method="post"> <!-- /board/insert POST submit -->
-                    
-                    <input type="text" id="title" name="title" placeholder="제목 입력" required autofocus style="font-size: 25px;" />
-                    
-                    <div style="padding-left: 30px; padding-bottom: 10px; padding-top: 10px; font-size: 13px;">
-                       <label for="userid" style="font-weight:bold;">작성자</label>
-                       
-                    </div>
-                    <hr style="margin: 0"/>
-                    
-                    
-                    <textarea rows="10" id="content" name="content" placeholder="내용 입력" required></textarea>
-                    
-                    
-                    <div>
-                        <input class="submit_btn" type="submit" value="등록">
-                    </div>
-                </form>
-         </div>
-         
-	
-	</div>
-
- 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+	 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
 </html>
