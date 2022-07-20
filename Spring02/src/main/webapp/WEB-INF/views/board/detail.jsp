@@ -35,6 +35,7 @@
 	            	<c:if test="${signInUserId == board.userid}">
 	                	<%-- 로그인 사용자 아이디와 글 작성자 아이디가 일치할 때만 수정 메뉴를 보여줌. --%>
 	                	<li><a href="./update?bno=${board.bno}">수정</a></li>
+	                	<li><a href="./delete?bno=${board.bno}">삭제</a></li>
 	               	</c:if>
 	               	<li><a href="./main">게시판 목록</a></li>
 	            </ul>	

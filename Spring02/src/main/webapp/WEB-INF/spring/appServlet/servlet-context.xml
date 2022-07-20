@@ -36,7 +36,12 @@
     		<mapping path="/board/insert"/> <!-- 공지사항 작성 -->
             <mapping path="/board/detail"/> <!-- 상세 보기 -->
             <mapping path="/board/delete"/> <!-- 글 삭제 -->
-    		<beans:ref bean="authInterceptor"/>
+            <mapping path="/cart/cartMain"/> 
+            <mapping path="/cart/cartUpdate"/>
+            <mapping path="/product/manage"/>
+			<mapping path="/product/proInsert"/>
+			<mapping path="/product/proUpdate"/>            
+    		<beans:ref bean="authInterceptor"/> 
     	</interceptor>
     	<interceptor> <!-- 아이디/패스워드 확인 후 로그인 성공/실패 처리 -->
             <mapping path="/user/signin"/>

@@ -88,15 +88,32 @@
 													<option value="${i}">${i} 
 												</c:forEach>
 											</select>개
-										
-											<input type="submit" value="CART" style="background-color: #1b5033; color: white; margin: 0 15px; border: none; border-radius: 4px; font-size: 13px; padding: 6px 15px;"> 
+											
+											<c:if test="${empty signInUserId}"> <%-- 로그인 되어 있지 않은 경우 --%>		
+												<a href="../user/signin" class="button" style="background-color: #1b5033; color: white; margin: 0 15px; border: none; border-radius: 4px; font-size: 13px; padding: 6px 15px;">CART</a>	
+											</c:if>
+											
+											<c:if test="${not empty signInUserId}"> <%-- 로그인 되어 있는 경우 --%>
+												<input type="submit" value="CART" style="background-color: #1b5033; color: white; margin: 0 15px; border: none; border-radius: 4px; font-size: 13px; padding: 6px 15px;"> 	
+											</c:if>												
+											
 										</form>	
-									</div>	
+									</div>
+									
+								
+									
+										
 									<br>
 									<hr>
 									<div class="row" style="text-align: center;">
+										<c:if test="${empty signInUserId}"> <%-- 로그인 되어 있지 않은 경우 --%>		
+											<a href="../user/signin" class="button" style="background-color:#1b5033; color: white; margin: 0 auto;  font-size: 16px; padding: 25px 90px; ">바로 구매</a>
+										</c:if>
+										
+										<c:if test="${not empty signInUserId}"> <%-- 로그인 되어 있는 경우 --%>
+											<a href="#" class="button" style="background-color:#1b5033; color: white; margin: 0 auto;  font-size: 16px; padding: 25px 90px; ">바로 구매</a>
+										</c:if>										
 									
-									<a href="#" class="button" style="background-color:#1b5033; color: white; margin: 0 auto;  font-size: 16px; padding: 25px 90px; ">바로 구매</a>
 									<a href="#" class="button" style="background-color:#1b5033; color: white; margin: 0 auto;  font-size: 16px; padding: 25px 90px;">상품 목록</a>
 									
 									</div>	
