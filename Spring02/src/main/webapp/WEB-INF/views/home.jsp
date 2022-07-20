@@ -16,6 +16,7 @@
         	    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
 			<title>Brand</title>
 		<link rel="stylesheet" href="./resources/css/shop/menubar.css">
+		<link rel="stylesheet" href="./resources/css/shop/footer.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		
 		
@@ -60,6 +61,9 @@
 		    color: #133c25;
 		    font-size: 20px;
 		} 
+		
+		
+		
   		</style>	
 	</head>
 	
@@ -74,22 +78,22 @@
 				<li><a href="./product/all">ALL</a></li>
 				<li><a href="./product/earring">Earring</a></li>
 				<li><a href="./product/ring">Ring</a></li>
-				<li><a href="">Event</a></li>
-				<li><a href="">News</a></li>
-				<li><a href="./board/main">FAQ</a></li>
+				<li><a href="">Event</a></li>			
+				<li><a href="./board/main">Notice</a></li>
 			</ul>
 			
 			<ul class="navbar_right">
 			<c:if test="${empty signInUserId}"> <%-- 로그인 되어 있지 않은 경우 --%>		
-				<li><a href="./user/signin">Login</a></li>	
+				<li><a href="./user/signin">Login</a></li>
+				<li><a href="./user/register">SignUp</a></li>	
 				
 			</c:if>
 			
 			<c:if test="${not empty signInUserId}"> <%-- 로그인 되어 있는 경우 --%>
-				<li> <span>${signInUserId}</span>
+				<li> <span>[${signInUserId}]</span>
 	            	<a href="./user/signout">로그아웃</a>
 	            </li>
-	            <li><a href="./cart/cartMain"><i class="fa-solid fa-heart"></i></a></li>
+	            <li><a href="./cart/cartMain"><span class="material-symbols-outlined">shopping_cart</span></a></li>
 	            
 			</c:if>
 			</ul>
@@ -202,6 +206,16 @@
 		
 		 	<br><br>
 		 	
+		 	<footer>
+		 		<div class="foo_div" style="text-align: center;">
+		 			<span>(주) DREAM</span> <span> ㅣ </span>
+		 			<span>대표 : 양가영</span> <span> ㅣ </span>
+		 			<span>사업자 등록번호 : 00-000-0000 </span> <span> ㅣ </span>
+		 			<p>주소 : 서울특별시 서대문구</p>
+		 			<p>행복을 드리는 DREAM입니다.</p>  
+		 			<img src="./resources/imgs/shop/pr29.jpg">
+		 		</div>	
+		 	</footer>
 			
 			
 

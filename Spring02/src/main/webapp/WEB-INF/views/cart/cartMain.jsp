@@ -14,6 +14,7 @@
 		 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 		 <link rel="stylesheet" href="../resources/css/shop/menubar.css">
 		 <link rel="stylesheet" href="../resources/css/shop/caMain.css">
+		 <link rel="stylesheet" href="../resources/css/shop/footer.css">
 		 
 		 <style>
 			.container a { color: black;}
@@ -131,13 +132,10 @@
 				</div>
 			</div>
 	        <br><hr>
-	        
-	        
 				<input type="button" value="결제하기" id="payment">	
-			
-			
-	  
 		</div>
+		
+		<%@ include file = "../include/footer.jsp" %>
 		
 	
 	

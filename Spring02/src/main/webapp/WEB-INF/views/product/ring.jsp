@@ -14,6 +14,7 @@
 
 		 <link rel="stylesheet" href="../resources/css/shop/menubar.css">
 		 <link rel="stylesheet" href="../resources/css/shop/proAll.css">
+		 <link rel="stylesheet" href="../resources/css/shop/footer.css">
 		 <style>
 			.container a { color: black;}
 		    .container a:hover { color: black;}
@@ -86,7 +87,7 @@
 			</section>
 			
 		</div>
-	
+		<%@ include file = "../include/footer.jsp" %>
 	 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 	</body>

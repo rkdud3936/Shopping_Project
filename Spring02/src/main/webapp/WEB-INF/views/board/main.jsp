@@ -17,6 +17,7 @@
 		
 		<link rel="stylesheet" href="../resources/css/shop/menubar.css">
 		<link rel="stylesheet" href="../resources/css/shop/board1.css">
+		<link rel="stylesheet" href="../resources/css/shop/footer.css">
 		
 		<style>
 			.container a { color: black;}
@@ -26,24 +27,20 @@
 
 	<body>
 		<%@ include file = "../include/mainnav.jsp" %>
-		
+
 	    
 		<div class="container">
-			<!--  
-			<header class="text-center" style="padding-top: 50px; padding-bottom: 50px">
-	                <h1>공지사항</h1>
-	        </header>
-	       -->
+			
 	       <div>
-	       		 <img class="img" src="../resources/imgs/shop/web04.jpg" alt="New York" width="100%" height="200"> 
+	       		 <img class="img" src="../resources/imgs/shop/web04.jpg" width="100%" height="200"> 
 	       </div>
 	       <hr> 
 	        <div class="flex-container">
 	        	<div class="leftselect text-center">
-	        		<h3>고객센터</h3>
+	        		<h3>공지사항</h3>
 	       		</div>
 	        	<div class="midselect text-right">
-	        		<h2>FAQ 검색</h2> 
+	        		<h2>DREAM</h2>  
 	        	</div>
 	        	<div  class="rightselect">
 	                <form class="select form-inline" action="./search" method="get" >
@@ -99,11 +96,12 @@
 	                        </c:forEach>
 	                    </tbody>
 	                </table>
-	            </div>
-	            
-	           
+	            </div>           
 		</div>
-	 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+		
+		<%@ include file = "../include/footer.jsp" %>
+		
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 	
 	</body>

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+footer{
+	background-color: #edeceb;
+	margin-top: 50px;
+}
+
+.foo_div {
+ 	text-align: center;
+ 	font-size: 13px;
+ 	color: #a6a29b;	
+ 	
+}
+
+.foo_div p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
+
+.foo_div img {
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+}
+

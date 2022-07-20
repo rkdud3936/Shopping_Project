@@ -14,7 +14,7 @@
 			<title>Brand</title>
 		<link rel="stylesheet" href="../resources/css/shop/menubar.css">
 		<link rel="stylesheet" href="../resources/css/shop/register1.css">
-		
+		<link rel="stylesheet" href="../resources/css/shop/footer.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		
 		
@@ -31,35 +31,35 @@
             display: none;
         	padding-bottom: 20px;
         }
+       
+
+	
         </style>
-</head>
+	</head>
 	<body>
 		
 		<%@ include file = "../include/mainnav.jsp" %>
 		
 		<div class="registerCont">
 			<div class="container">
-	        
-	        <h5><span>DREAM</span> 회원가입</h5>
-	        
+			<h5><span>DREAM</span> 회원가입</h5> 
 	        <hr /><br />
-	        <form action="./register" method="post" >
-	            <input type="text" id="userid" name="userid" placeholder="아이디"  required style="height:30px; width: 495px" /><br /><br />
-	            	<div class="valid">멋진 아이디입니다!</div>
-	                <div class="invalid">이미 사용중인 아이디입니다.</div>
-	                         
-	            <input type="password" name="pwd" placeholder="비밀번호"  required style="height:30px; width: 495px" /><br /><br />
-	            <input type="email"  name="email" placeholder="이메일 주소"  required style="height:30px; width: 495px" /><br />
-	            
-	            <p>
-	           		<input type="submit" value="가입하기" id="signup" required style="height:60px; width: 495px" /><br /><br />
-	            </p>
-	        </form>
-	        <hr />
-	    </div>
-	    
-	    
-		</div>     
+	        	<form action="./register" method="post" >
+		            <input type="text" id="userid" name="userid" placeholder="아이디"  required style="height:30px; width: 495px" /><br /><br />
+		            	<div class="valid">멋진 아이디입니다!</div>
+		                <div class="invalid">이미 사용중인 아이디입니다.</div>
+		                         
+		            <input type="password" name="pwd" placeholder="비밀번호"  required style="height:30px; width: 495px" /><br /><br />
+		            <input type="email"  name="email" placeholder="이메일 주소"  required style="height:30px; width: 495px" /><br />
+		            
+		            <p>
+		           		<input type="submit" value="가입하기" id="signup" required style="height:60px; width: 495px" /><br /><br />
+		            </p>
+		        </form>
+	       		<hr />
+	   		</div>
+		</div> 
+		<%@ include file = "../include/footer.jsp" %>    
 	
 		
 	 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
@@ -86,7 +86,7 @@
 	        	});
 	        	
 	        });
-	        </script>
+	   	</script>
 		
 	</body>
 </html>

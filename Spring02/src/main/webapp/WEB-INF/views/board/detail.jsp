@@ -17,6 +17,7 @@
 		  
 		 <link rel="stylesheet" href="../resources/css/shop/menubar.css">
 		 <link rel="stylesheet" href="../resources/css/shop/bodetail.css">
+		
 			
 		 <style>
 
@@ -80,6 +81,8 @@
 	        <div id="replies"> <%-- 댓글 목록 --%>
 	        </div>
     	</div>
+		
+		<%@ include file = "../include/footer.jsp" %>
 		
 	
 	 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>

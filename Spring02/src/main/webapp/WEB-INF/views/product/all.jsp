@@ -15,6 +15,7 @@
 
 		 <link rel="stylesheet" href="../resources/css/shop/menubar.css">
 		 <link rel="stylesheet" href="../resources/css/shop/proAll.css">
+		 <link rel="stylesheet" href="../resources/css/shop/footer.css">
 		 
 		 
 		 <style>
@@ -91,16 +92,15 @@
 					</div>
 				</div> 
 			</section>        
-		   
-		    <c:if test="${signInUserId == '관리자'}">
-				<div>
-					<a href="./manage" class="btn btn-secondary" role="button" style="color: white; float: right;">상품 관리</a>
-				</div>
-			</c:if>
-			
-			
-		
+			<div style="text-align: right;">
+				<c:if test="${signInUserId == '관리자'}">
+					<div>
+						<a href="./manage" class="btn btn-secondary" role="button" style="color: white;">상품 관리</a>
+					</div>
+				</c:if>
+			</div>		   
 		</div>
+		<%@ include file = "../include/footer.jsp" %>
 	
 	 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
