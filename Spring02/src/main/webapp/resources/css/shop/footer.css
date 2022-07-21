@@ -3,6 +3,7 @@
 footer{
 	background-color: #edeceb;
 	margin-top: 50px;
+
 }
 
 .foo_div {
@@ -14,7 +15,7 @@ footer{
 
 .foo_div p {
 	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-bottom: 5px; 
 }
 
 

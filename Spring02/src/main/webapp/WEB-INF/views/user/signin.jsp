@@ -39,7 +39,7 @@
 		            <input type="hidden" name="url" value="${url}"/>
 		        </form>
 	        	<br /><hr />
-	        	<p><a href="./register"><input type="button" value="회원가입" id="signup"/></a></p>
+	        	<p><a href="./register"><input type="button" value="회원가입" id="signup" style="color: gray"/></a></p> 
 	    	</div>
 		</div>    
 		<%@ include file = "../include/footer.jsp" %>

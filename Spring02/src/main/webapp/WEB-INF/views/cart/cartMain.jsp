@@ -13,7 +13,7 @@
         	    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
 		 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 		 <link rel="stylesheet" href="../resources/css/shop/menubar.css">
-		 <link rel="stylesheet" href="../resources/css/shop/caMain.css">
+		 <link rel="stylesheet" href="../resources/css/shop/caMain.css"> 
 		 <link rel="stylesheet" href="../resources/css/shop/footer.css">
 		 
 		 <style>
@@ -41,8 +41,9 @@
 	<body>
 		<%@ include file = "../include/mainnav.jsp" %>
 		
-		<div class="container">
+		<div class="container" >
 			<div class="cartTable">
+	        	
 	        	<table class="table table-hover">
 	            	<thead>
 	                	<tr>
@@ -57,7 +58,6 @@
 	                    </tr>
 	                </thead>
 	                <tbody>
-	                	
 	                	<c:set var="sum" value="0" />
 	                	<c:forEach var="cartList" items="${cartList}">
 	                    <c:if test="${cartList.userid == signInUserId}">
@@ -83,12 +83,11 @@
 	                            
 	                        </tr>
 								<c:set var="sum" value="${sum + (cartList.ccount*cartList.pprice)}" />                    
-	                    
 	                    </c:if>
-	                    </c:forEach>
-	                    
+	                    </c:forEach>  
 	                </tbody>
-	            </table> 
+	            </table>
+	           
 	        </div>     
 	        <hr><br>
 	        <div style="text-align: center;">
@@ -132,10 +131,12 @@
 				</div>
 			</div>
 	        <br><hr>
-				<input type="button" value="결제하기" id="payment">	
+			<div style="text-align: center; margin: 50px;">
+				<a href="../order/buy" class="button" style="background-color:#1b5033; color: white; margin: 0 auto;  font-size: 16px; padding: 25px 90px; ">결제하기</a>
+			</div>
 		</div>
 		
-		<%@ include file = "../include/footer.jsp" %>
+		
 		
 	
 	

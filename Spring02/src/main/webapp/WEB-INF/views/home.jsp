@@ -77,9 +77,9 @@
 			<ul class="navbar_menu"> 
 				<li><a href="./product/all">ALL</a></li>
 				<li><a href="./product/earring">Earring</a></li>
-				<li><a href="./product/ring">Ring</a></li>
-				<li><a href="">Event</a></li>			
+				<li><a href="./product/ring">Ring</a></li>		
 				<li><a href="./board/main">Notice</a></li>
+				<li><a href="./intro/about">about Dream</a></li>	 
 			</ul>
 			
 			<ul class="navbar_right">

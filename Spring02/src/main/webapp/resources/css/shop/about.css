@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.container{
+	margin-top:40px;
+	width: 600px; 
+	text-align: center;
+	border: solid #ffe79d 8px;
+	
+}
+.head {
+	font-size: 40px;	
+	font-weight: bold;
+	padding-bottom: 10px;
+	color: #113320;
+} 
+
+.head i {
+	color: #FFCC33;
+}
+
+.introduce {
+	font-size: 18px;
+	
+}
+
+.cs	{
+	font-size: 15px;	
+	font-weight: bold;	
+}
+
+.cs_time {
+	font-size: 13px;	
+	font-weight: normal;
+}
+
+.image{
+	margin: 10px;
+}
+.image img{
+	width: 100px;
+	height: 100px;
+	
+}
+
+
+ 

@@ -55,7 +55,7 @@ textarea:focus {outline:none;}
 
 
 .reply_item #rtext {
-	width: 100%;  	
+	 font-size: 12px;	
 }
 
 .reply_item #userid{

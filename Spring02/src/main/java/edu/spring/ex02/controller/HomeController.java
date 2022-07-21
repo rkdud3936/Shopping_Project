@@ -44,6 +44,10 @@ public class HomeController {
 		model.addAttribute("productAllList", list);
 	}
 	
+	@RequestMapping(value = "/intro/about", method = RequestMethod.GET)
+	public void about() {
+		logger.info("about() GET 방식 호출");
+	}
 
 	
 	

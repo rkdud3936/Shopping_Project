@@ -27,6 +27,8 @@ public class ReplyServiceImpl implements ReplyService {
 		
 		return replyDao.read(bno);
 	}
+	
+
 
 	@Override
 	public int insert(Reply reply) {

@@ -111,10 +111,10 @@
 										</c:if>
 										
 										<c:if test="${not empty signInUserId}"> <%-- 로그인 되어 있는 경우 --%>
-											<a href="#" class="button" style="background-color:#1b5033; color: white; margin: 0 auto;  font-size: 16px; padding: 25px 90px; ">바로 구매</a>
+											<a href="../order/buyDirect?pid=${product.pid}" class="button" style="background-color:#1b5033; color: white; margin: 0 auto;  font-size: 16px; padding: 25px 90px; ">바로 구매</a>
 										</c:if>										
 									
-									<a href="#" class="button" style="background-color:#1b5033; color: white; margin: 0 auto;  font-size: 16px; padding: 25px 90px;">상품 목록</a>
+									<a href="./all" class="button" style="background-color:#1b5033; color: white; margin: 0 auto;  font-size: 16px; padding: 25px 90px;">상품 목록</a>
 									
 									</div>	
 													
@@ -126,7 +126,6 @@
 			
 			</table>	
 			
-			<hr/>
 					
 
 		</div>
