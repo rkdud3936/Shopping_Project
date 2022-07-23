@@ -24,6 +24,7 @@ public class OrderController {
 	@Autowired private CartService cartService;
 	@Autowired private ProductService productService;
 	
+	// 주문리스트 
 	@RequestMapping(value = "/buy", method = RequestMethod.GET)
 	public void buy(Model model) {
 		log.info("buy()호출");
@@ -32,23 +33,25 @@ public class OrderController {
 		model.addAttribute("cartList", list);
 	}
 	
+	// 바로구매 click 후 항목 보여주기
 	@RequestMapping(value = "/buyDirect", method = RequestMethod.GET)
 	public void buyDirect(int pid, Model model) {
 		log.info("buyDirect(pid={}) GET 호출", pid);
+		
 		Product product = productService.select(pid);
 		model.addAttribute("product", product);
 	}
 	
-	
+	// 주문 삭제
 	@RequestMapping(value = "/buyDelete", method = RequestMethod.GET)
 	public String buyDelete(int cid) {
 		log.info("buyDelete(cid={}) 호출", cid);
 		
 		cartService.delete(cid);
-		
 		return "redirect:/order/buy";
 	}
 	
+	// 주문 수정
 	@RequestMapping(value = "/buyUpdate", method = RequestMethod.GET)
 	public void buyUpdate(int cid, Model model) {
 		log.info("buyUpdate(cid={}) GET 호출", cid);
@@ -62,11 +65,12 @@ public class OrderController {
 	public String buyUpdate(Cart cart) {
 		log.info("update({}) POST 호출", cart);
 		
-		cartService.update(cart); // 게시글 수정 서비스 완료.
+		cartService.update(cart);
 		
-		return "redirect:/order/buy"; // 게시판 메인으로 이동.
+		return "redirect:/order/buy";
 	}
 	
+	// 결제완료
 	@RequestMapping(value = "/payEnd", method = RequestMethod.GET)
 	public void payEnd() {
 		log.info("payEnd() GET 방식 호출");

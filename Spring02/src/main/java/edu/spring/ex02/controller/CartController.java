@@ -29,28 +29,25 @@ public class CartController {
 	
 	@Autowired private CartService cartService;
 	
+	// 장바구니 메인
 	@RequestMapping(value = "/cartMain", method = RequestMethod.GET)
 	public void cartMain(Model model) {
 		log.info("cartMain() 호출");
 		
-		
-		// 서비스 객체의 메서드를 사용해서 글 전체 목록을 가져옴.
 		List<CartListVO> list = cartService.select();
-		// 글 전체 목록을 Model 객체에 속성으로 추가해서 View(JSP)까지 전달
 		model.addAttribute("cartList", list);
-		
-		// controller 메서드가 리턴하는 문자열이 없으면 요청 주소로 View(jsp 파일)을 찾음.
 	}
 	
+	// 장바구니 삭제
 	@RequestMapping(value = "/cartDelete", method = RequestMethod.GET)
 	public String cartDelete(int cid) {
 		log.info("cartDelete(pid={}) 호출", cid);
 		
 		cartService.delete(cid);
-		
 		return "redirect:/cart/cartMain";
 	}
 	
+	// 장바구니 수정
 	@RequestMapping(value = "/cartUpdate", method = RequestMethod.GET)
 	public void cartUpdate(int cid, Model model) {
 		log.info("cartUpdate(cid={}) GET 호출", cid);
@@ -63,10 +60,8 @@ public class CartController {
 	@RequestMapping(value = "/cartUpdate", method = RequestMethod.POST)
 	public String update(Cart cart) {
 		log.info("update({}) POST 호출", cart);
-		
-		cartService.update(cart); // 게시글 수정 서비스 완료.
-		
-		return "redirect:/cart/cartMain"; // 게시판 메인으로 이동.
+		cartService.update(cart); 
+		return "redirect:/cart/cartMain"; 
 	}
 	
 }

@@ -2,9 +2,6 @@ package edu.spring.ex02.domain;
 
 import java.util.Date;
 
-// MVC 디자인 패턴에서 Model에 해당하는 클래스.
-// 멤버 변수(필드, 프로퍼티)들의 이름은 데이터베이스 테이블의 컬럼 이름과 일치.
-// -> MyBatis 프레임워크에서 getter/setter를 찾을 때 테이블의 컬럼 이름을 기준으로 찾기 때문에.
 public class Board {
 	private int bno;
 	private String title;
